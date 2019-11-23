@@ -22,8 +22,9 @@ set service dhcp-server shared-network-name LAN subnet 192.168.0.0/24 lease 8640
 set service dhcp-server shared-network-name LAN subnet 192.168.0.0/24 range 0 start 192.168.0.100
 set service dhcp-server shared-network-name LAN subnet 192.168.0.0/24 range 0 stop 192.168.0.200
 
+set service dns forwarding allow-from 0.0.0.0/0
 set service dns forwarding cache-size 1000
-set service dns forwarding listen-on eth0
+set service dns forwarding listen-address 192.168.0.1
 set service dns forwarding name-server 8.8.8.8
 set service dns forwarding name-server 8.8.4.4
 
